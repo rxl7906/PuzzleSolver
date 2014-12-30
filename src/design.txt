@@ -1,0 +1,38 @@
+csci142 Puzzle Solver, Project Part 2:  Water & Clock
+
+Names: Robin Li Lakshay Khatter
+1. Explain how your common solver is able to work with both puzzles.
+
+Using generics, we create a class Solver that uses a method Solve that takes
+in a puzzle<E> data structure puzzle. This allows the solver to handle
+the integer and arraylist<integer> aspect from both clock and water puzzle.
+
+2. What was the type of configuration you used for each puzzle?
+
+For the clock puzzle, the configuration was Integer type.
+For the water puzzle, the configuration was ArrayList<Integer> type. 
+
+3. Starting with the Puzzle interface from part 1, what were the major
+changes and additions you had to make?
+
+We allowed for the puzzle interface to take in any data structure by using
+generics. I called puzzle<E> to incorporate that. The getStart() method
+no longer will deal specifically with int, it will now deal with any
+data structure because of the E. The getGoal() method was removed and 
+replaced with an isGoal(E config) method that takes in a configuration
+of any type and returns a boolean. getNeighbors() method used to take
+an ArrayList<Integer> and a int configuration but now it takes an
+ArrayList<E> and E config to account for different data structures. 
+
+4. What problems, if any, did you encounter when re-designing your 
+project from part 1?
+
+The biggest problem was trying to figure out how to implement both 
+types of data structures because getting the neighbors for the clock
+was different compared to the water. We had to research and implement 
+generics in order to solve this issue. We wanted to make another solver 
+class however it was stated that we were not allowed to. 
+The other issue was trying to getNeighbors for the water puzzle because
+we were dealing with ArrayList<ArrayList<Integer>> and each neighbor
+dealt consisted of ArrayList<Integer>. Also we used a hashset for the 
+visited configs and this would allow us to eliminate duplicates. 

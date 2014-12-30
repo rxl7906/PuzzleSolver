@@ -1,0 +1,13 @@
+csci142 Puzzle Solver, Project Part 2:  Water & Clock
+
+Names: Robin Li Lakshay Khatter
+
+Robin Li - implemented changes to the puzzle inferface to incorporate
+generics. Made revisions to the solver and clock puzzle. Made the constructor
+for the water puzzle and the isGoal and getStart. Created another data
+structure for Jug for the water puzzle. Made revisions to the
+water.java file after Lakshay completed it. 
+
+Lakshay - made the getNeighbors() method and wrote the main method to
+show the correct format. Did testing to make sure the solver works 
+with both clock and water. 
